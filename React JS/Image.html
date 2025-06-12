@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React Image</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px;
+    }
+
+    img {
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #333;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <script>
+    const image = React.createElement("img", {
+      src: "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-path-by-a-pond-free-image.jpg?w=600&quality=80",
+      alt: "React Image",
+    });
+    
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(image);
+  </script>
+</body>
+</html>

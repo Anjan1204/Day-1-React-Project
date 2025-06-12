@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>React Headings</title>
+ <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 { font-size: 2.5em; color: #054647; }
+    h2 { font-size: 2.2em; color: #005f73; }
+    h3 { font-size: 2em; color: #028090; }
+    h4 { font-size: 1.8em; color: #3d5a80; }
+    h5 { font-size: 1.6em; color: #52796f; }
+    h6 { font-size: 1.4em; color: #6c757d; }
+  </style>
+  
+</head>
+<body>
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  
+  <script>
+    const headings = [
+      React.createElement("h1", {}, "Hello My name is Anjan"),
+      React.createElement("h2", {}, "Hello My name is Moksh"),
+      React.createElement("h3", {}, "Hello My name is Mahek"),
+      React.createElement("h4", {}, "Hello My name is Viya"),
+      React.createElement("h5", {}, "Hello My name is Anjali"),
+      React.createElement("h6", {}, "Hello My name is Sunny"),
+    ];
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(React.createElement("div", {}, headings));
+  </script>
+</body>
+</html>

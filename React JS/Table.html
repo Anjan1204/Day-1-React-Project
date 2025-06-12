@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Table</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    table {
+      border: 2px solid black;
+      border-collapse: collapse;
+      margin: 20px auto;
+      width: 80%;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      background-color: #fff;
+    }
+
+    th, td {
+      padding: 16px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0a8c8e;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e6f7ff;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <script>
+    const table = React.createElement(
+      "table",
+      { border: "2 px solid", cellPadding: "15", style: { margin: "20px auto", borderCollapse: "collapse" } },
+      [
+        React.createElement("thead", {}, 
+          React.createElement("tr", {}, [
+            React.createElement("th", {}, "Name"),
+            React.createElement("th", {}, "Email"),
+            React.createElement("th", {}, "Department")
+          ])
+        ),
+        React.createElement("tbody", {}, [
+          React.createElement("tr", {}, [
+            React.createElement("td", {}, "Mahek"),
+            React.createElement("td", {}, "Mahek@example.com"),
+            React.createElement("td", {}, "  MCA")
+          ]),
+          React.createElement("tr", {}, [
+            React.createElement("td", {}, "anjan"),
+            React.createElement("td", {}, "anjan@example.com"),
+            React.createElement("td", {}, "  HR"),
+          ]),
+          React.createElement("tr", {}, [
+            React.createElement("td", {}, "Moksh"),
+            React.createElement("td", {}, "Moksh@example.com"),
+            React.createElement("td", {}, "  CEO"),
+          ]),
+        ])
+      ]
+    );
+  
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(table);
+  </script>
+</body>
+</html>
